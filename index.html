@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="todoApp">
-
 <head>
-    <title>FirstDay - AngularJS1</title>
+    <title>Case Study</title>
     <script src="angular.js"></script>
     <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
     <script src="app.js"></script>
@@ -12,8 +11,8 @@
     <h1>ToDo App</h1>
     
     <div ng-controller="TodoCtrl as ctrl">
-        <p>Add a Todo:</p>
-        <input type="text" ng-model="ctrl.newTodo" name="" value="">
+        <label for="addI">Add a Todo:</label>
+        <input type="text" ng-model="ctrl.newTodo" name="" value="" id="addI">
         <button type="button" ng-click="ctrl.addnNewTodo()">Add</button>
 
         <p>
