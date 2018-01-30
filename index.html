@@ -3,7 +3,10 @@
 <head>
     <title>Case Study</title>
     <style type="text/css">
-        
+        .btn, .edit-btn, .done-btn, .delete-btn{padding:10px; font-size:14px; line-height:20px; background-color:#f00;}
+        .delete-btn{background-color:#e6e6e6;}
+        .edit-btn{background-color:#f5f5f5;}
+        .done-btn{background-color:#e8e8e8;}
     </style>
 </head>
 
@@ -17,15 +20,15 @@
         <button class="btn" type="button" ng-click="ctrl.addnNewTodo()">Add</button>
 
         <p>
-            <button ng-hide="ctrl.editMode" ng-click="ctrl.triggerEditMode()" type="button">Edit</button>
-            <button ng-show="ctrl.editMode" ng-click="ctrl.triggerEditMode()" type="button">Done</button>
+            <button class="edit-btn" ng-hide="ctrl.editMode" ng-click="ctrl.triggerEditMode()" type="button">Edit</button>
+            <button class="done-btn" ng-show="ctrl.editMode" ng-click="ctrl.triggerEditMode()" type="button">Done</button>
         </p>
 
         <ol>
             <li ng-repeat="todo in ctrl.todos track by $index">
                 <span ng-hide="ctrl.editMode">{{todo}}</span>
                 <input ng-model="todo" ng-show="ctrl.editMode" type="text" name="" value="">
-                <button ng-hide="ctrl.editMode" ng-click="ctrl.deleteTodo($index)" type="button">Delete</button>
+                <button class="delete-btn" ng-hide="ctrl.editMode" ng-click="ctrl.deleteTodo($index)" type="button">Delete</button>
             </li>
         </ol>
     </div>
