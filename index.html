@@ -2,18 +2,19 @@
 <html ng-app="todoApp">
 <head>
     <title>Case Study</title>
-    <script src="angular.js"></script>
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
-    <script src="app.js"></script>
+    <style type="text/css">
+        
+    </style>
 </head>
 
 <body>
     <h1>ToDo App</h1>
     
+    
     <div ng-controller="TodoCtrl as ctrl">
         <label for="addI">Add a Todo:</label>
         <input type="text" ng-model="ctrl.newTodo" name="" value="" id="addI">
-        <button type="button" ng-click="ctrl.addnNewTodo()">Add</button>
+        <button class="btn" type="button" ng-click="ctrl.addnNewTodo()">Add</button>
 
         <p>
             <button ng-hide="ctrl.editMode" ng-click="ctrl.triggerEditMode()" type="button">Edit</button>
@@ -29,9 +30,9 @@
         </ol>
     </div>
 
-    <!--
-       
-    -->
+    <script src="angular.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
+    <script src="app.js"></script>
     
 </body>
 
