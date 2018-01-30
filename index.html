@@ -3,10 +3,11 @@
 <head>
     <title>Case Study</title>
     <style type="text/css">
-        .btn, .edit-btn, .done-btn, .delete-btn{padding:10px; font-size:14px; line-height:20px; background-color:#f00;}
+        .btn, .edit-btn, .done-btn, .delete-btn{padding:5px; font-size:14px; line-height:20px; background-color:#f00;}
         .delete-btn{background-color:#e6e6e6;}
         .edit-btn{background-color:#f5f5f5;}
         .done-btn{background-color:#e8e8e8;}
+        .listItem{margin-bottom:10px;}
     </style>
 </head>
 
@@ -25,7 +26,7 @@
         </p>
 
         <ol>
-            <li ng-repeat="todo in ctrl.todos track by $index">
+            <li class="listItem" ng-repeat="todo in ctrl.todos track by $index">
                 <span ng-hide="ctrl.editMode">{{todo}}</span>
                 <input ng-model="todo" ng-show="ctrl.editMode" type="text" name="" value="">
                 <button class="delete-btn" ng-hide="ctrl.editMode" ng-click="ctrl.deleteTodo($index)" type="button">Delete</button>
