@@ -1,2 +1,2 @@
-# ritugupta64-github.io
-todoapp
+# todo-app-angularjs
+Todo App - AngularJs
